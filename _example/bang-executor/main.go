@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"unicode/utf8"
 
-	"github.com/elk-language/go-prompt"
+	"github.com/balaji01-4d/go-prompt"
 )
 
 func main() {

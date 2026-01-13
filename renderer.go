@@ -4,8 +4,8 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/elk-language/go-prompt/debug"
-	istrings "github.com/elk-language/go-prompt/strings"
+	"github.com/balaji01-4d/go-prompt/debug"
+	istrings "github.com/balaji01-4d/go-prompt/strings"
 )
 
 const multilinePrefixCharacter = '.'
@@ -297,6 +297,10 @@ func (r *Renderer) writeStringColor(text string, color Color) {
 	}
 }
 
+func (r *Renderer) writeRaw(b []byte) {
+	r.out.WriteRaw(b)
+}
+
 func (r *Renderer) write(b []byte) {
 	if _, err := r.out.Write(b); err != nil {
 		panic(err)
@@ -364,6 +368,7 @@ tokenLoop:
 		var tokenColor Color
 		var tokenBackgroundColor Color
 		var tokenDisplayAttributes []DisplayAttribute
+		var tokenANSI string
 		var noToken bool
 		if ok {
 			currentFirstByteIndex = token.FirstByteIndex()
@@ -371,6 +376,9 @@ tokenLoop:
 			tokenColor = token.Color()
 			tokenBackgroundColor = token.BackgroundColor()
 			tokenDisplayAttributes = token.DisplayAttributes()
+			if t, ok := token.(ANSIToken); ok {
+				tokenANSI = t.ANSI()
+			}
 		} else if previousByteIndex == istrings.Len(input)-1 {
 			break tokenLoop
 		} else {
@@ -384,6 +392,7 @@ tokenLoop:
 		color := r.inputTextColor
 		backgroundColor := r.inputBGColor
 		displayAttributes := tokenDisplayAttributes
+		ansi := ""
 		text := input[previousByteIndex+1 : currentFirstByteIndex]
 		previousByteIndex = currentLastByteIndex
 		lineBuffer = lineBuffer[:0]
@@ -404,7 +413,11 @@ tokenLoop:
 						break tokenLoop
 					}
 					lineBuffer = append(lineBuffer, '\n')
-					r.out.SetDisplayAttributes(color, backgroundColor, displayAttributes...)
+					if ansi != "" {
+						r.writeRaw([]byte(ansi))
+					} else {
+						r.out.SetDisplayAttributes(color, backgroundColor, displayAttributes...)
+					}
 					r.write(lineBuffer)
 					r.resetFormatting()
 					r.renderPrefix(multilinePrefix)
@@ -425,7 +438,11 @@ tokenLoop:
 				lineBuffer = append(lineBuffer, runeBuffer[:size]...)
 			}
 			if len(lineBuffer) > 0 {
-				r.out.SetDisplayAttributes(color, backgroundColor, displayAttributes...)
+				if ansi != "" {
+					r.writeRaw([]byte(ansi))
+				} else {
+					r.out.SetDisplayAttributes(color, backgroundColor, displayAttributes...)
+				}
 				r.write(lineBuffer)
 				r.resetFormatting()
 			}
@@ -440,6 +457,7 @@ tokenLoop:
 			color = tokenColor
 			backgroundColor = tokenBackgroundColor
 			displayAttributes = tokenDisplayAttributes
+			ansi = tokenANSI
 			text = input[currentFirstByteIndex : currentLastByteIndex+1]
 			lineBuffer = lineBuffer[:0]
 			interToken = false

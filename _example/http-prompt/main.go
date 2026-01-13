@@ -10,8 +10,8 @@ import (
 	"path"
 	"strings"
 
-	prompt "github.com/elk-language/go-prompt"
-	istrings "github.com/elk-language/go-prompt/strings"
+	prompt "github.com/balaji01-4d/go-prompt"
+	istrings "github.com/balaji01-4d/go-prompt/strings"
 )
 
 type RequestContext struct {

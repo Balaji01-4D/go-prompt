@@ -1,7 +1,7 @@
 package prompt
 
 import (
-	istrings "github.com/elk-language/go-prompt/strings"
+	istrings "github.com/balaji01-4d/go-prompt/strings"
 )
 
 // Lexer is a streaming lexer that takes in a piece of text
@@ -20,6 +20,11 @@ type Token interface {
 	DisplayAttributes() []DisplayAttribute
 	FirstByteIndex() istrings.ByteNumber // Index of the last byte of this token
 	LastByteIndex() istrings.ByteNumber  // Index of the last byte of this token
+}
+
+type ANSIToken interface {
+	Token
+	ANSI() string
 }
 
 // SimpleToken as the default implementation of Token.

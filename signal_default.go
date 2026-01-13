@@ -8,7 +8,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/elk-language/go-prompt/debug"
+	"github.com/balaji01-4d/go-prompt/debug"
 )
 
 func (p *Prompt) handleSignals(exitCh chan int, winSizeCh chan *WinSize, stop chan struct{}) {

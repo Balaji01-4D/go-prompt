@@ -6,7 +6,7 @@ package prompt
 import (
 	"testing"
 
-	istrings "github.com/elk-language/go-prompt/strings"
+	istrings "github.com/balaji01-4d/go-prompt/strings"
 	"github.com/google/go-cmp/cmp"
 )
 

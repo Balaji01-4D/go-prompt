@@ -7,10 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.3.0] - 21.05.2025
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v1.2.0...elk-language:go-prompt:v1.3.0)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v1.2.0...elk-language:go-prompt:v1.3.0)
 
 ### Added
-- [PR#26](https://github.com/elk-language/go-prompt/pull/26) - add `HistoryInterface` to let users implement their own custom history
+- [PR#26](https://github.com/balaji01-4d/go-prompt/pull/26) - add `HistoryInterface` to let users implement their own custom history
 - Fix multiline editing
 - Add maximum size to history
 - Add new methods to History
@@ -20,24 +20,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.2.0] - 28.03.2025
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v1.1.5...elk-language:go-prompt:v1.2.0)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v1.1.5...elk-language:go-prompt:v1.2.0)
 
 ### Added
-- [PR#24](https://github.com/elk-language/go-prompt/pull/24) - the project now builds for other environments than windows or unix (WASM)
+- [PR#24](https://github.com/balaji01-4d/go-prompt/pull/24) - the project now builds for other environments than windows or unix (WASM)
 - Update Go to 1.24
 
 ## [1.1.5] - 15.08.2023
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v1.1.4...elk-language:go-prompt:v1.1.5)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v1.1.4...elk-language:go-prompt:v1.1.5)
 
 ### Fixed
-- [PR#18](https://github.com/elk-language/go-prompt/pull/18) - fix the `http-prompt` example and refactor the example building script (make it fail when an example doesn't compile)
-- [PR#17](https://github.com/elk-language/go-prompt/pull/17) - correctly restore terminal parameters
-- [PR#16](https://github.com/elk-language/go-prompt/pull/16) - propagate `getOriginalTermios` error when called multiple times
+- [PR#18](https://github.com/balaji01-4d/go-prompt/pull/18) - fix the `http-prompt` example and refactor the example building script (make it fail when an example doesn't compile)
+- [PR#17](https://github.com/balaji01-4d/go-prompt/pull/17) - correctly restore terminal parameters
+- [PR#16](https://github.com/balaji01-4d/go-prompt/pull/16) - propagate `getOriginalTermios` error when called multiple times
 
 ## [1.1.4] - 29.07.2023
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v1.1.3...elk-language:go-prompt:v1.1.4)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v1.1.3...elk-language:go-prompt:v1.1.4)
 
 ### Added
 - `func (*prompt.Document).PreviousLineIndentSpaces() int`
@@ -46,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.3] - 29.07.2023
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v1.1.2...elk-language:go-prompt:v1.1.3)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v1.1.2...elk-language:go-prompt:v1.1.3)
 
 ### Added
 - `func (*prompt.Document).IndentSpaces(input string) int`
@@ -56,7 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.2] - 29.07.2023
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v1.1.1...elk-language:go-prompt:v1.1.2)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v1.1.1...elk-language:go-prompt:v1.1.2)
 
 ### Added
 - `func (*prompt.Prompt).DeleteBeforeCursor(count strings.GraphemeNumber) string`
@@ -69,7 +69,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.1] - 28.07.2023
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v1.1.0...elk-language:go-prompt:v1.1.1)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v1.1.0...elk-language:go-prompt:v1.1.1)
 
 ### Added
 - `func (*prompt.Prompt).TerminalColumns() strings.Width`
@@ -85,7 +85,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.0] - 28.07.2023
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v1.0.3...elk-language:go-prompt:v1.1.0)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v1.0.3...elk-language:go-prompt:v1.1.0)
 
 ### Fixed
 - Fix cursor movement for text with grapheme clusters like 🇵🇱, 🙆🏿‍♂️
@@ -139,7 +139,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.3] - 25.07.2023
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v1.0.2...elk-language:go-prompt:v1.0.3)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v1.0.2...elk-language:go-prompt:v1.0.3)
 
 ### Fixed
 - Reset formatting after rendering a styled token
@@ -147,7 +147,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.2] - 25.07.2023
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v1.0.1...elk-language:go-prompt:v1.0.2)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v1.0.1...elk-language:go-prompt:v1.0.2)
 
 ### Added
 
@@ -167,7 +167,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.1] - 25.07.2023
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v1.0.0...elk-language:go-prompt:v1.0.1)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v1.0.0...elk-language:go-prompt:v1.0.1)
 
 ### Added
 
@@ -176,10 +176,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 25.07.2023
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v0.2.6...elk-language:go-prompt:v1.0.0)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v0.2.6...elk-language:go-prompt:v1.0.0)
 
 This release contains a major refactoring of the codebase.
-It's the first release of the [elk-language/go-prompt](https://github.com/elk-language/go-prompt) fork.
+It's the first release of the [elk-language/go-prompt](https://github.com/balaji01-4d/go-prompt) fork.
 
 The original library has been abandoned for at least 2 years now (although serious development has stopped 5 years ago).
 
@@ -260,7 +260,7 @@ This release aims to make the code a bit cleaner, fix a couple of bugs and provi
 
 ## [0.2.6] - 2021-03-03
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v0.2.5...elk-language:go-prompt:v0.2.6)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v0.2.5...elk-language:go-prompt:v0.2.6)
 
 ### Changed
 
@@ -269,7 +269,7 @@ This release aims to make the code a bit cleaner, fix a couple of bugs and provi
 
 ## [0.2.5] - 2020-09-19
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v0.2.4...elk-language:go-prompt:v0.2.5)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v0.2.4...elk-language:go-prompt:v0.2.5)
 
 ### Changed
 
@@ -278,7 +278,7 @@ This release aims to make the code a bit cleaner, fix a couple of bugs and provi
 
 ## [0.2.4] - 2020-09-18
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v0.2.3...elk-language:go-prompt:v0.2.4)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v0.2.3...elk-language:go-prompt:v0.2.4)
 
 ### Changed
 
@@ -287,7 +287,7 @@ This release aims to make the code a bit cleaner, fix a couple of bugs and provi
 
 ## [0.2.3] - 2018-10-25
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v0.2.2...elk-language:go-prompt:v0.2.3)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v0.2.2...elk-language:go-prompt:v0.2.3)
 
 ### Added
 
@@ -308,7 +308,7 @@ This release aims to make the code a bit cleaner, fix a couple of bugs and provi
 
 ## [0.2.2] - 2018-06-28
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v0.2.1...elk-language:go-prompt:v0.2.2)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v0.2.1...elk-language:go-prompt:v0.2.2)
 
 ### Added
 
@@ -326,7 +326,7 @@ This release aims to make the code a bit cleaner, fix a couple of bugs and provi
 
 ## [0.2.1] - 2018-02-14
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v0.2.0...elk-language:go-prompt:v0.2.1)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v0.2.0...elk-language:go-prompt:v0.2.1)
 
 ### Added
 
@@ -341,7 +341,7 @@ This release aims to make the code a bit cleaner, fix a couple of bugs and provi
 
 ## [0.2.0] - 2018-02-13
 
-[Diff](https://github.com/elk-language/go-prompt/compare/v0.1.0...elk-language:go-prompt:v0.2.0)
+[Diff](https://github.com/balaji01-4d/go-prompt/compare/v0.1.0...elk-language:go-prompt:v0.2.0)
 
 ### Added
 
