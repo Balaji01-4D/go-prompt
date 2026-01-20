@@ -1,4 +1,4 @@
-# go-prompt
+ji# go-prompt
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/balaji01-4d/go-prompt)](https://goreportcard.com/report/github.com/balaji01-4d/go-prompt)
 ![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)
@@ -104,10 +104,6 @@ Key Binding          | Description
 <kbd>Ctrl + K</kbd>  | Cut the line after the cursor to the clipboard
 <kbd>Ctrl + U</kbd>  | Cut the line before the cursor to the clipboard
 <kbd>Ctrl + L</kbd>  | Clear the screen
-
-### History
-
-You can use <kbd>Up arrow</kbd> and <kbd>Down arrow</kbd> to walk through the history of commands executed.
 
 [![History](https://github.com/c-bata/assets/raw/master/go-prompt/history.gif)](#history)
 
